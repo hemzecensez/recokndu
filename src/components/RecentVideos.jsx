@@ -1,18 +1,21 @@
 const videos = [
   {
-    title: "Short 01",
+    title: "Short 1",
+    subtitle: "Kısa yolculuk anı",
     meta: "YouTube Shorts",
     href: "https://youtube.com/shorts/imdmxom07gk?si=LcBxFIlULOc1MT9j",
     thumbnail: "https://img.youtube.com/vi/imdmxom07gk/hqdefault.jpg",
   },
   {
-    title: "Short 02",
+    title: "Short 2",
+    subtitle: "Manzara ve hissiyat",
     meta: "YouTube Shorts",
     href: "https://youtube.com/shorts/4twB_LQSBJc?si=QAhE8LSTVqV2K2av",
     thumbnail: "https://img.youtube.com/vi/4twB_LQSBJc/hqdefault.jpg",
   },
   {
-    title: "Short 03",
+    title: "Short 3",
+    subtitle: "Yolun ruhu",
     meta: "YouTube Shorts",
     href: "https://youtube.com/shorts/hCH49omUDvU?si=C0YzrADwGeIxSt6F",
     thumbnail: "https://img.youtube.com/vi/hCH49omUDvU/hqdefault.jpg",
@@ -64,6 +67,7 @@ export default function RecentVideos() {
               <h3 className="mt-4 text-xl font-semibold text-white transition group-hover:text-white/75">
                 {item.title}
               </h3>
+              <p className="mt-1 text-sm text-white/60">{item.subtitle}</p>
             </a>
           ))}
         </div>
