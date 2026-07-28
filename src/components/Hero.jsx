@@ -38,14 +38,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="relative flex min-h-[92vh] items-center overflow-hidden">
+    <section id="hero" className="relative flex min-h-screen items-center overflow-hidden">
       <div className="absolute inset-0 z-0 overflow-hidden bg-black">
-        <div className="absolute inset-0 z-10 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.08),_transparent_32%),radial-gradient(circle_at_85%_18%,_rgba(255,255,255,0.05),_transparent_30%),linear-gradient(110deg,_rgba(0,0,0,0.72)_0%,_rgba(0,0,0,0.46)_38%,_rgba(0,0,0,0.16)_100%)]" />
-        <div className="absolute inset-0 z-10 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.02),rgba(0,0,0,0.28)_70%,rgba(0,0,0,0.5))]" />
-        <div className="absolute right-8 top-24 hidden h-40 w-40 rounded-full bg-white/10 blur-3xl md:block" />
-        <div className="absolute bottom-0 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-white/5 blur-[120px]" />
         <iframe
-          className="pointer-events-none absolute inset-0 h-[150%] w-[150%] min-h-full min-w-full -translate-x-[12.5%] -translate-y-[12.5%] scale-[1.15] border-0"
+          className="absolute inset-0 h-[140%] w-[140%] min-h-full min-w-full -translate-x-[10%] -translate-y-[10%] scale-110 border-0 pointer-events-none"
           src={heroVideoSrc}
           title="Hero arka plan videosu"
           allow="autoplay; encrypted-media"
@@ -54,41 +50,34 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-20 mx-auto w-full max-w-7xl px-8 py-24 sm:py-28 lg:px-12">
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/80 via-black/45 to-black/10" />
+
+      <div className="relative z-20 mx-auto w-full max-w-7xl px-8 pt-20">
         <motion.div
           key={slide.title}
           initial={{ opacity: 0, x: -24 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2, duration: 0.55 }}
-          className="max-w-2xl"
+          className="max-w-xl"
         >
-          <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/85 backdrop-blur-md">
-            <span className="mr-2 h-2 w-2 rounded-full bg-red-500" />
+          <p className="text-sm font-semibold tracking-[.28em] text-white/75">
             {slide.eyebrow}
-          </div>
+          </p>
 
-          <h1 className="mt-6 text-5xl font-black leading-[0.95] text-white drop-shadow-[0_8px_30px_rgba(0,0,0,0.55)] md:text-7xl lg:text-[5rem]">
+          <h1 className="mt-5 text-5xl font-bold leading-tight text-white md:text-7xl">
             {slide.title}
           </h1>
 
-          <p className="mt-6 max-w-xl text-base leading-8 text-white/80 md:text-lg">
+          <p className="mt-6 max-w-lg text-base leading-7 text-white/80 md:text-lg">
             {slide.description}
           </p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-3">
-            <a
-              className="inline-flex rounded-full bg-white px-6 py-3 text-sm font-bold text-black transition duration-300 hover:-translate-y-0.5 hover:bg-white/90"
-              href="#latest-video"
-            >
-              {slide.cta}
-            </a>
-            <a
-              className="inline-flex rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white/90 backdrop-blur-md transition duration-300 hover:bg-white/20"
-              href="#recent-videos"
-            >
-              Shorts&apos;ları Gör
-            </a>
-          </div>
+          <a
+            className="mt-9 inline-flex rounded-full bg-white px-6 py-3 text-sm font-bold text-black transition hover:bg-white/85"
+            href="#latest-video"
+          >
+            {slide.cta}
+          </a>
         </motion.div>
 
         <div className="mt-12 flex gap-2" aria-label="Video seçimi">
@@ -96,7 +85,7 @@ export default function Hero() {
             <button
               key={item.eyebrow}
               className={`h-1.5 rounded-full transition-all ${
-                index === activeSlide ? "w-10 bg-white shadow-[0_0_18px_rgba(255,255,255,0.45)]" : "w-3 bg-white/45 hover:bg-white/75"
+                index === activeSlide ? "w-9 bg-white" : "w-3 bg-white/45 hover:bg-white/75"
               }`}
               type="button"
               aria-label={`${index + 1}. videoyu göster`}
