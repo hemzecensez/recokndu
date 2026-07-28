@@ -10,15 +10,15 @@ const countries = [
 
 const moments = [
   {
-    src: `${base}images/ÇİN.jpeg`,
+    src: `${base}images/cin.jpeg`,
     alt: "Dağ manzarası",
   },
   {
-    src: `${base}images/DUBAİ.jpeg`,
+    src: `${base}images/dubai.jpeg`,
     alt: "Doğa içinde yol",
   },
   {
-    src: `${base}images/TAYLAND.jpeg`,
+    src: `${base}images/tayland.jpeg`,
     alt: "Gün batımında dağlar",
   },
 ];
