@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const heroVideoId = "KZo8z_qqdfs";
@@ -38,21 +38,22 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative flex min-h-screen items-center overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden">
-        <iframe
-          className="absolute inset-0 h-[140%] w-[140%] min-h-full min-w-full -translate-x-[10%] -translate-y-[10%] pointer-events-none scale-110"
-          src={`https://www.youtube-nocookie.com/embed/${heroVideoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${heroVideoId}&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&showinfo=0&disablekb=1&fs=0&vq=hd1080`}
-          title="Hero arka plan videosu"
-          allow="autoplay; encrypted-media"
-          allowFullScreen={false}
-          loading="lazy"
-          tabIndex={-1}
-        />
+      <div className="absolute inset-0 z-0 overflow-hidden bg-black">
+        <div className="absolute inset-0 scale-[1.15]">
+          <iframe
+            className="absolute inset-0 h-full w-full border-0 pointer-events-none"
+            src={`https://www.youtube.com/embed/${heroVideoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${heroVideoId}&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&showinfo=0&disablekb=1&fs=0&vq=hd1080&origin=${window.location.origin}`}
+            title="Hero arka plan videosu"
+            allow="autoplay; encrypted-media"
+            allowFullScreen={false}
+            tabIndex={-1}
+          />
+        </div>
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/10" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/80 via-black/45 to-black/10" />
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-8 pt-20">
+      <div className="relative z-20 mx-auto w-full max-w-7xl px-8 pt-20">
         <motion.div
           key={slide.title}
           initial={{ opacity: 0, x: -24 }}
