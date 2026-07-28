@@ -1,20 +1,21 @@
-const base = import.meta.env.BASE_URL;
-
 const videos = [
   {
-    title: "Yolculuk yeni başlıyor",
-    meta: "Yeni video · 08:24",
-    video: `${base}videos/selam.mp4`,
+    title: "Short 01",
+    meta: "YouTube Shorts",
+    href: "https://youtube.com/shorts/imdmxom07gk?si=LcBxFIlULOc1MT9j",
+    thumbnail: "https://img.youtube.com/vi/imdmxom07gk/hqdefault.jpg",
   },
   {
-    title: "Sokaktan hikâyeler",
-    meta: "Yeni video · 05:12",
-    video: `${base}videos/sok.mp4`,
+    title: "Short 02",
+    meta: "YouTube Shorts",
+    href: "https://youtube.com/shorts/4twB_LQSBJc?si=QAhE8LSTVqV2K2av",
+    thumbnail: "https://img.youtube.com/vi/4twB_LQSBJc/hqdefault.jpg",
   },
   {
-    title: "Sıradaki macera yakında",
-    meta: "Çok yakında",
-    image: `${base}images/sel.png`,
+    title: "Short 03",
+    meta: "YouTube Shorts",
+    href: "https://youtube.com/shorts/hCH49omUDvU?si=C0YzrADwGeIxSt6F",
+    thumbnail: "https://img.youtube.com/vi/hCH49omUDvU/hqdefault.jpg",
   },
 ];
 
@@ -43,30 +44,18 @@ export default function RecentVideos() {
           {videos.map((item) => (
             <a
               key={item.title}
-              href={channelUrl}
+              href={item.href}
               className="group block"
               target="_blank"
               rel="noreferrer"
             >
               <div className="relative aspect-video overflow-hidden rounded-2xl bg-white/5">
-                {item.video ? (
-                  <video
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    src={item.video}
-                  />
-                ) : (
-                  <img
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    src={item.image}
-                    alt="Yaklaşan videodan bir kare"
-                    loading="lazy"
-                  />
-                )}
+                <img
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  src={item.thumbnail}
+                  alt={item.title}
+                  loading="lazy"
+                />
                 <span className="absolute bottom-3 left-3 rounded-full bg-black/65 px-3 py-1 text-xs font-medium text-white">
                   {item.meta}
                 </span>
