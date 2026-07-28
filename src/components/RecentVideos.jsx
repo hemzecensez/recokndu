@@ -3,22 +3,19 @@ const videos = [
     title: "Short 1",
     subtitle: "Kısa yolculuk anı",
     meta: "YouTube Shorts",
-    href: "https://youtube.com/shorts/imdmxom07gk?si=LcBxFIlULOc1MT9j",
-    thumbnail: "https://img.youtube.com/vi/imdmxom07gk/hqdefault.jpg",
+    videoId: "imdmxom07gk",
   },
   {
     title: "Short 2",
     subtitle: "Manzara ve hissiyat",
     meta: "YouTube Shorts",
-    href: "https://youtube.com/shorts/4twB_LQSBJc?si=QAhE8LSTVqV2K2av",
-    thumbnail: "https://img.youtube.com/vi/4twB_LQSBJc/hqdefault.jpg",
+    videoId: "4twB_LQSBJc",
   },
   {
     title: "Short 3",
     subtitle: "Yolun ruhu",
     meta: "YouTube Shorts",
-    href: "https://youtube.com/shorts/hCH49omUDvU?si=C0YzrADwGeIxSt6F",
-    thumbnail: "https://img.youtube.com/vi/hCH49omUDvU/hqdefault.jpg",
+    videoId: "hCH49omUDvU",
   },
 ];
 
@@ -45,19 +42,14 @@ export default function RecentVideos() {
 
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {videos.map((item) => (
-            <a
-              key={item.title}
-              href={item.href}
-              className="group block"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="relative aspect-video overflow-hidden rounded-2xl bg-white/5">
-                <img
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                  src={item.thumbnail}
-                  alt={item.title}
-                  loading="lazy"
+            <div key={item.title} className="group">
+              <div className="relative aspect-video overflow-hidden rounded-2xl bg-black/20">
+                <iframe
+                  className="h-full w-full"
+                  src={`https://www.youtube-nocookie.com/embed/${item.videoId}?rel=0&modestbranding=1&playsinline=1`}
+                  title={item.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                 />
                 <span className="absolute bottom-3 left-3 rounded-full bg-black/65 px-3 py-1 text-xs font-medium text-white">
                   {item.meta}
@@ -68,7 +60,7 @@ export default function RecentVideos() {
                 {item.title}
               </h3>
               <p className="mt-1 text-sm text-white/60">{item.subtitle}</p>
-            </a>
+            </div>
           ))}
         </div>
       </div>
