@@ -7,7 +7,7 @@ export default function Navbar() {
     <header className="navbar">
       <div className="navbar-content">
         <a className="navbar-logo" href="#hero" aria-label="Ana sayfa">
-          <img src={`${base}images/moni.HEIC`} alt="" />
+          <img src={`${base}images/moni.jpg`} alt="" />
         </a>
 
         <nav className="navbar-links" aria-label="Ana menü">

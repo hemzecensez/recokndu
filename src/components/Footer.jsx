@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl border-t border-white/12 py-12 md:flex md:items-end md:justify-between">
         <div>
           <div className="flex items-center gap-3">
-            <img className="h-9 w-9" src={`${base}images/moni.HEIC`} alt="Kanal logosu" />
+            <img className="h-9 w-9" src={`${base}images/moni.jpg`} alt="Kanal logosu" />
             <p className="text-lg font-bold">Yolda Hikâyeler</p>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-6 text-white/50">

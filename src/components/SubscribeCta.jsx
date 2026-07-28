@@ -11,7 +11,7 @@ export default function SubscribeCta() {
         <div className="relative grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3">
-              <img className="h-11 w-11 rounded-xl bg-white/10 p-1.5" src={`${base}images/moni.HEIC`} alt="Kanal logosu" />
+              <img className="h-11 w-11 rounded-xl bg-white/10 p-1.5" src={`${base}images/moni.jpg`} alt="Kanal logosu" />
               <p className="text-xs font-semibold tracking-[.3em] text-white/55">YOLCULUĞA KATIL</p>
             </div>
             <h2 className="mt-7 text-4xl font-bold leading-tight md:text-6xl">Yeni rotaları birlikte keşfedelim.</h2>

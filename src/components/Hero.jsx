@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const heroVideoId = "KZo8z_qqdfs";
+const heroVideoSrc = `${import.meta.env.BASE_URL}videos/selam.mp4`;
 
 const slides = [
   {
@@ -39,16 +39,15 @@ export default function Hero() {
   return (
     <section id="hero" className="relative flex min-h-screen items-center overflow-hidden">
       <div className="absolute inset-0 z-0 overflow-hidden bg-black">
-        <div className="absolute inset-0 scale-[1.15]">
-          <iframe
-            className="absolute inset-0 h-full w-full border-0 pointer-events-none"
-            src={`https://www.youtube.com/embed/${heroVideoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${heroVideoId}&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&showinfo=0&disablekb=1&fs=0&vq=hd1080&origin=${window.location.origin}`}
-            title="Hero arka plan videosu"
-            allow="autoplay; encrypted-media"
-            allowFullScreen={false}
-            tabIndex={-1}
-          />
-        </div>
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          src={heroVideoSrc}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        />
       </div>
 
       <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/80 via-black/45 to-black/10" />
