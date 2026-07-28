@@ -1,23 +1,22 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+const heroVideoId = "KZo8z_qqdfs";
+
 const slides = [
   {
-    video: "/videos/sex.mp4",
     eyebrow: "YENİ VİDEOLAR",
     title: "Hikâyelerin peşine düş.",
     description: "Kanalda yeni videolar, kısa hikâyeler ve keşfedilecek anlar seni bekliyor.",
     cta: "Videoyu İzle",
   },
   {
-    video: "/videos/çıkar.mp4",
     eyebrow: "KANALI KEŞFET",
     title: "Her karede yeni bir dünya.",
     description: "Sokaktan ekrana uzanan içeriklerle yolculuğa eşlik et.",
     cta: "Keşfet",
   },
   {
-    video: "/videos/mex.mp4",
     eyebrow: "ÖNE ÇIKANLAR",
     title: "İzle, keşfet, ilham al.",
     description: "Yeni bölümler ve sevdiğin içerikler için kanala göz at.",
@@ -39,22 +38,17 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative flex min-h-screen items-center overflow-hidden">
-      <AnimatePresence mode="wait">
-        <motion.video
-          key={slide.video}
-          className="absolute inset-0 h-full w-full object-cover"
-          initial={{ opacity: 0, scale: 1.04 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 1.02 }}
-          transition={{ duration: 0.9, ease: "easeInOut" }}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          src={slide.video}
+      <div className="absolute inset-0 overflow-hidden">
+        <iframe
+          className="absolute inset-0 h-[140%] w-[140%] min-h-full min-w-full -translate-x-[10%] -translate-y-[10%] pointer-events-none scale-110"
+          src={`https://www.youtube-nocookie.com/embed/${heroVideoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${heroVideoId}&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&showinfo=0&disablekb=1&fs=0&vq=hd1080`}
+          title="Hero arka plan videosu"
+          allow="autoplay; encrypted-media"
+          allowFullScreen={false}
+          loading="lazy"
+          tabIndex={-1}
         />
-      </AnimatePresence>
+      </div>
 
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/10" />
 
@@ -89,7 +83,7 @@ export default function Hero() {
         <div className="mt-12 flex gap-2" aria-label="Video seçimi">
           {slides.map((item, index) => (
             <button
-              key={item.video}
+              key={item.eyebrow}
               className={`h-1.5 rounded-full transition-all ${
                 index === activeSlide ? "w-9 bg-white" : "w-3 bg-white/45 hover:bg-white/75"
               }`}
