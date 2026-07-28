@@ -3,21 +3,21 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    video: "/videos/sokici.MOV",
+    video: "/videos/sex.mp4",
     eyebrow: "YENİ VİDEOLAR",
     title: "Hikâyelerin peşine düş.",
     description: "Kanalda yeni videolar, kısa hikâyeler ve keşfedilecek anlar seni bekliyor.",
     cta: "Videoyu İzle",
   },
   {
-    video: "/videos/selam.MOV",
+    video: "/videos/çıkar.mp4",
     eyebrow: "KANALI KEŞFET",
     title: "Her karede yeni bir dünya.",
     description: "Sokaktan ekrana uzanan içeriklerle yolculuğa eşlik et.",
     cta: "Keşfet",
   },
   {
-    video: "/videos/sicak.MP4",
+    video: "/videos/mex.mp4",
     eyebrow: "ÖNE ÇIKANLAR",
     title: "İzle, keşfet, ilham al.",
     description: "Yeni bölümler ve sevdiğin içerikler için kanala göz at.",
