@@ -1,19 +1,19 @@
 const videos = [
   {
     title: "Short 1",
-    subtitle: "Kısa yolculuk anı",
+    subtitle: "Hızlı bir yolculuk anı",
     meta: "YouTube Shorts",
     videoId: "imdmxom07gk",
   },
   {
     title: "Short 2",
-    subtitle: "Manzara ve hissiyat",
+    subtitle: "Manzara ve atmosfer",
     meta: "YouTube Shorts",
     videoId: "4twB_LQSBJc",
   },
   {
     title: "Short 3",
-    subtitle: "Yolun ruhu",
+    subtitle: "Yolculuğun ruhu",
     meta: "YouTube Shorts",
     videoId: "hCH49omUDvU",
   },
