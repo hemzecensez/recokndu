@@ -56,10 +56,6 @@ export default function RecentVideos() {
                 </span>
               </div>
 
-              <h3 className="mt-4 text-xl font-semibold text-white transition group-hover:text-white/75">
-                {item.title}
-              </h3>
-              <p className="mt-1 text-sm text-white/60">{item.subtitle}</p>
             </div>
           ))}
         </div>
