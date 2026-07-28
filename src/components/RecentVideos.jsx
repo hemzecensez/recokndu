@@ -1,18 +1,20 @@
+const base = import.meta.env.BASE_URL;
+
 const videos = [
   {
     title: "Yolculuk yeni başlıyor",
     meta: "Yeni video · 08:24",
-    video: "/videos/selam.mp4",
+    video: `${base}videos/selam.mp4`,
   },
   {
     title: "Sokaktan hikâyeler",
     meta: "Yeni video · 05:12",
-    video: "/videos/sok.mp4",
+    video: `${base}videos/sok.mp4`,
   },
   {
     title: "Sıradaki macera yakında",
     meta: "Çok yakında",
-    image: "/images/sel.png",
+    image: `${base}images/sel.png`,
   },
 ];
 

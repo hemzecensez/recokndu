@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL;
+
 const countries = [
   { flag: "🇹🇷", name: "Türkiye" },
   { flag: "🇮🇹", name: "İtalya" },
@@ -8,15 +10,15 @@ const countries = [
 
 const moments = [
   {
-    src: "/images/ÇİN.jpeg",
+    src: `${base}images/ÇİN.jpeg`,
     alt: "Dağ manzarası",
   },
   {
-    src: "/images/DUBAİ.jpeg",
+    src: `${base}images/DUBAİ.jpeg`,
     alt: "Doğa içinde yol",
   },
   {
-    src: "/images/TAYLAND.jpeg",
+    src: `${base}images/TAYLAND.jpeg`,
     alt: "Gün batımında dağlar",
   },
 ];
