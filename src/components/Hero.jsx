@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const heroVideoSrc = `${import.meta.env.BASE_URL}videos/selam.mp4`;
+const heroVideoId = "KZo8z_qqdfs";
+const heroVideoSrc = `https://www.youtube-nocookie.com/embed/${heroVideoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${heroVideoId}&rel=0&modestbranding=1&playsinline=1&showinfo=0&iv_load_policy=3&disablekb=1&fs=0&vq=hd1080`;
 
 const slides = [
   {
@@ -39,14 +40,13 @@ export default function Hero() {
   return (
     <section id="hero" className="relative flex min-h-screen items-center overflow-hidden">
       <div className="absolute inset-0 z-0 overflow-hidden bg-black">
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
+        <iframe
+          className="absolute inset-0 h-[140%] w-[140%] min-h-full min-w-full -translate-x-[10%] -translate-y-[10%] scale-110 border-0 pointer-events-none"
           src={heroVideoSrc}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
+          title="Hero arka plan videosu"
+          allow="autoplay; encrypted-media"
+          allowFullScreen={false}
+          tabIndex={-1}
         />
       </div>
 
