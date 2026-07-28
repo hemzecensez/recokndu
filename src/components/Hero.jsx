@@ -40,8 +40,8 @@ export default function Hero() {
   return (
     <section id="hero" className="relative flex min-h-[92vh] items-center overflow-hidden">
       <div className="absolute inset-0 z-0 overflow-hidden bg-black">
-        <div className="absolute inset-0 z-10 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.12),_transparent_32%),radial-gradient(circle_at_85%_18%,_rgba(255,255,255,0.08),_transparent_30%),linear-gradient(110deg,_rgba(0,0,0,1)_0%,_rgba(0,0,0,0.9)_38%,_rgba(0,0,0,0.28)_100%)]" />
-        <div className="absolute inset-0 z-10 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.08),rgba(0,0,0,0.55)_70%,rgba(0,0,0,0.85))]" />
+        <div className="absolute inset-0 z-10 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.08),_transparent_32%),radial-gradient(circle_at_85%_18%,_rgba(255,255,255,0.05),_transparent_30%),linear-gradient(110deg,_rgba(0,0,0,0.72)_0%,_rgba(0,0,0,0.46)_38%,_rgba(0,0,0,0.16)_100%)]" />
+        <div className="absolute inset-0 z-10 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.02),rgba(0,0,0,0.28)_70%,rgba(0,0,0,0.5))]" />
         <div className="absolute right-8 top-24 hidden h-40 w-40 rounded-full bg-white/10 blur-3xl md:block" />
         <div className="absolute bottom-0 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-white/5 blur-[120px]" />
         <iframe
